@@ -10,6 +10,8 @@ public class HomeWork2 {
         String Greet = "Привет, мир!";
         int z = 5;
         printXTimes(Greet, z);
+        int year = 400;
+        isItALeapYear(year);
 
     }
     //region Task1
@@ -37,6 +39,23 @@ public class HomeWork2 {
     public static void printXTimes(String text, int a) {
         for (int i = a; i>0; i--){
             System.out.println(text);
+        }
+    }
+    //endregion
+    //region Task5
+    public static boolean isItALeapYear(int year){
+        if (year%4==0){
+            if (year%100!=0 || year%400==0){
+                System.out.println("true");
+                return true;
+            }
+            else{
+                System.out.println("false");
+                return false;
+            }
+        }else {
+            System.out.println("false");
+            return false;
         }
     }
     //endregion
